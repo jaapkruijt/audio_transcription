@@ -15,7 +15,7 @@ def preprocess_emissor(file_path):
         utterance['text'] = utterance['text'].strip()
 
     emissor_preprocessed = json.dumps(text)
-    with open(f'{file_path}/text_processed.json', 'w') as outfile:
+    with open(f'{file_path}/text_processed.json', 'w') as outfile:  # change so that it does not overwrite
         outfile.write(emissor_preprocessed)
 
 

@@ -8,7 +8,9 @@ import os
 scenario_id = '230503_132141_01c7ed0e-90d2-44a4-bd4d-85d59266cea7'
 
 part_2_start = {'en_09': 858.0, 'en_12': 828.0, 'en_13': 663.0, 'en_14': 739.0, 'en_17': 846.0, 'en_21': 685.0,
-                'en_24': 646.0, 'ak_02': 530.0, 'ak_04': 594.0, 'ak_05': 679.0, 'ak_06': 0, 'ak_07': 930.0}
+                'en_24': 646.0, 'ak_02': 530.0, 'ak_04': 594.0, 'ak_05': 679.0, 'ak_06': 674.0, 'ak_07': 930.0,
+                'ak_08': 659.0, 'ak_09': 829.0, 'ak_20': 948.0, 'ak_22': 632.0, 'ak_23': 657.0, 'ak_26': 690.0,
+                'ak_27': 731.0, 'ak_29': 624.0, 'ak_40': 941.0, 'ak_41': 961.0}
 
 
 def get_robot_utterances(original_emissor):
@@ -108,7 +110,6 @@ def annotate_speakers(transcription, robot_utterances, participant_no):
 
 
 def annotate_files(directory):
-    speakers_annotated = []
     for participant_no in os.listdir(directory):
         files = {'robot_utterances': {}, 'part1': {}, 'part2': {}}
         data = os.path.join(directory, participant_no)
